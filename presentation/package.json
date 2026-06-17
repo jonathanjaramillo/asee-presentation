@@ -1,0 +1,22 @@
+{
+  "name": "asee-hybrid-hardware-wip",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.0.0",
+    "@slidev/theme-default": "^0.25.0"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.2.8",
+    "@iconify-json/logos": "^1.2.4",
+    "@iconify/utils": "^3.0.0",
+    "playwright-chromium": "^1.45.0",
+    "seedrandom": "^3.0.5",
+    "unocss": "^66.0.0"
+  }
+}
