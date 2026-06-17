@@ -3,6 +3,7 @@ theme: default
 highlighter: shiki
 css: unocss
 colorSchema: dark
+routerMode: hash
 title: 'Hybrid, Hands-on Courses in Robotics, Embedded Systems & IoT'
 info: |
   ## Work-in-Progress
