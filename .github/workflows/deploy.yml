@@ -30,6 +30,8 @@ jobs:
       - name: Build
         run: npm run build -- --base /asee-presentation/
         working-directory: presentation
+      - name: Add 404 fallback for SPA routing
+        run: cp presentation/dist/index.html presentation/dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: presentation/dist
