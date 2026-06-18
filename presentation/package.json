@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "@slidev/cli": "^52.0.0",
-    "@slidev/theme-default": "^0.25.0"
+    "@slidev/theme-default": "^0.25.0",
+    "micromark": "^4.0.2"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.2.8",
