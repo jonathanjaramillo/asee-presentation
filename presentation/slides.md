@@ -14,6 +14,10 @@ lineNumbers: false
 drawings:
   persist: false
 mdc: true
+vite:
+  server:
+    fs:
+      strict: false
 glowSeed: 229
 ---
 
@@ -36,8 +40,6 @@ as a case study, not a controlled result.
 -->
 
 ---
-layout: two-cols
-layoutClass: gap-8
 glowSeed: 100
 ---
 
@@ -45,33 +47,39 @@ glowSeed: 100
 
 Distance education is no longer an exception — it's structural.
 
-<v-clicks>
+<div class="grid grid-cols-3 gap-4 mt-8">
 
-- Students enrolled **exclusively online** jumped from **18% → 45%** between 2019 and 2020
-- The shift is **structural, not just pandemic-driven**:
-  - Growth of professional **M.Eng.** programs
-  - Working professionals wanting **part-time, employer-funded** degrees
-- **The catch:** hardware-intensive labs are the *hardest* thing to deliver remotely
-
-</v-clicks>
-
-::right::
-
-<div class="mt-16" border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg overflow-hidden>
-<div bg="white/10" backdrop-blur px-4 py-2 flex items-center gap-2>
-<div i-carbon:network-3 text-teal-300 text-xl />
-<span font-bold>Why hardware is hard remotely</span>
+<div v-click border="2 solid teal-700" bg="teal-800/20" rounded-lg overflow-hidden>
+<div bg="teal-800/40" px-4 py-2 flex items-center gap-2>
+<span text-xl>📈</span>
+<span font-bold>Enrollment shift</span>
 </div>
-<div px-5 py-4>
-
-Hands-on labs depend on **direct physical manipulation** and **sensory feedback** — exactly what a screen removes.
-
-<div class="mt-6 text-center">
-<span class="text-6xl font-bold text-teal-400">18% → 45%</span>
-<div class="text-sm opacity-70 mt-2">exclusively-online enrollment, 2019–2020 (NSB 2024)</div>
+<div px-4 py-4 text-sm text-center>
+<div class="text-3xl font-bold text-teal-400 mb-2">18% → 45%</div>
+Students enrolled <strong>exclusively online</strong> jumped between 2019 and 2020 <span class="opacity-60">(NSB 2024)</span>
+</div>
 </div>
 
+<div v-click border="2 solid blue-700" bg="blue-800/20" rounded-lg overflow-hidden>
+<div bg="blue-800/40" px-4 py-2 flex items-center gap-2>
+<span text-xl>🏗️</span>
+<span font-bold>Structural Changes</span>
 </div>
+<div px-4 py-3 text-sm>
+The shift is <strong>structural</strong>, not just pandemic related. Working professionals want <strong>part-time, employer-funded</strong> degrees.
+</div>
+</div>
+
+<div v-click border="2 solid orange-700" bg="orange-800/20" rounded-lg overflow-hidden>
+<div bg="orange-800/40" px-4 py-2 flex items-center gap-2>
+<span text-xl>🔧</span>
+<span font-bold>The catch</span>
+</div>
+<div px-4 py-3 text-sm>
+Hardware-intensive labs are the <em>hardest</em> thing to deliver remotely — they depend on <strong>direct physical manipulation</strong> and <strong>sensory feedback</strong>
+</div>
+</div>
+
 </div>
 
 <!--
@@ -292,9 +300,7 @@ Leverage existing Python skills; move cognitive load to *systems logic*, not syn
 </div>
 <div px-5 py-4>
 
-<BarRow label="Python" value="41" pct="93" color="#2dd4bf" />
-<BarRow label="C++" value="20" pct="45" color="#fbbf24" />
-<BarRow label="C" value="12" pct="27" color="#f87171" />
+<img src="./images/programming_languages.png" class="w-full rounded" />
 
 <div class="mt-6 text-center" border="2 solid violet-800" bg="violet-800/20" rounded-lg p-4>
 <span class="text-4xl font-bold text-violet-400">43%</span>
@@ -423,12 +429,7 @@ glowSeed: 125
 From **Lab 1** self-reports:
 
 <div class="mt-4" border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg px-5 py-4>
-<BarRow label="No AI used" value="36.4%" pct="36.4" color="#94a3b8" />
-<BarRow label="Debugging" value="30.3%" pct="30.3" color="#2dd4bf" />
-<BarRow label="Material comprehension" value="15.2%" pct="15.2" color="#60a5fa" />
-<BarRow label="Learning syntax" value="6.1%" pct="6.1" color="#fbbf24" />
-<BarRow label="Understanding code" value="6.1%" pct="6.1" color="#fb923c" />
-<BarRow label="Writing new code" value="6.1%" pct="6.1" color="#f87171" />
+<img src="./images/AI_usage.png" class="w-full rounded" />
 </div>
 
 <div class="text-xs opacity-50 mt-2">Figure 4 — some students reported more than one use.</div>
@@ -581,10 +582,7 @@ glowSeed: 100
 <div class="text-sm opacity-70 mb-4">Figure 1 — Distribution of majors across SYSEN 5411 + 5412.</div>
 
 <div class="mt-8" border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg px-6 py-5>
-Students spanned <strong>varied disciplinary backgrounds</strong> — from traditional engineering to <strong>finance and business</strong> — reflecting the breadth of the M.Eng. cohort.
-<div class="mt-4 text-xs opacity-60">
-📎 Replace this panel with Figure 1 from the paper (majors pie/bar chart).
-</div>
+<img src="./images/majors.png" class="w-full rounded" />
 </div>
 
 ::right::
@@ -604,8 +602,8 @@ Questions asked:
 
 </div>
 
-<div class="mt-4 text-xs opacity-60">
-📎 Replace with Figure 3 (familiarity ranking) from the paper.
+<div class="mt-4">
+<img src="./images/topic_familiarity.png" class="w-full rounded" />
 </div>
 
 <!--

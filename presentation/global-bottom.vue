@@ -14,7 +14,7 @@ import seedrandom from 'seedrandom'
  */
 import { computed, ref, watch } from 'vue'
 
-const { currentSlideRoute } = useNav()
+const { currentSlideRoute, currentPage, total } = useNav()
 
 export type Range = [number, number]
 
@@ -151,6 +151,7 @@ const poly3 = usePloy(3)
 
 <template>
   <div>
+    <div class="slide-number">{{ currentPage }} / {{ total }}</div>
     <div
       class="bg transform-gpu overflow-hidden pointer-events-none"
       :style="{ filter: `blur(70px) hue-rotate(${hue}deg)` }"
@@ -193,5 +194,16 @@ const poly3 = usePloy(3)
 
 .light .clip {
   opacity: 1 !important;
+}
+
+.slide-number {
+  position: absolute;
+  bottom: 10px;
+  right: 14px;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  color: white;
+  z-index: 10;
+  pointer-events: none;
 }
 </style>
