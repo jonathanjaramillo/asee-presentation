@@ -192,7 +192,7 @@ Distance learners receive **identical lab kits** — microcontrollers, motors, s
 
 ::right::
 
-<div class="mt-8" border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg overflow-hidden>
+<div v-click class="mt-8" border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg overflow-hidden>
 <div bg="white/10" backdrop-blur px-4 py-2 flex items-center gap-2>
 <div i-carbon:group text-teal-300 text-xl />
 <span font-bold>The cohort: 44 students</span>
@@ -245,7 +245,7 @@ glowSeed: 350
 </div>
 </div>
 
-<div v-click border="2 solid teal-800" bg="teal-800/20" rounded-lg overflow-hidden self-center>
+<div v-click border="2 solid teal-800" bg="teal-800/20" rounded-lg overflow-hidden>
 <div bg="teal-800/40" px-4 py-2 flex items-center gap-2>
 <div i-carbon:idea text-teal-300 text-xl />
 <span font-bold>Key insight</span>
@@ -270,52 +270,82 @@ thing remote students otherwise miss most.
 -->
 
 ---
-layout: two-cols
-layoutClass: gap-6
 glowSeed: 12129
 ---
 
 # Design Decision 2 — Hardware + Language
 
-Two linked choices, both driven by **parity**.
+<div class="grid grid-cols-2 gap-8 mt-4">
 
-<v-clicks>
-
-**Hardware — tool-less kits**
-No soldering iron, no oscilloscope; strong online docs.
-- 🤖 **XRP** (Experiential Robotics Platform) — web-based IDE
-- 🔌 **SunFounder Pico** kit — MicroPython examples
-
-**Language — MicroPython**
-Leverage existing Python skills; move cognitive load to *systems logic*, not syntax or toolchains.
-
-</v-clicks>
-
-::right::
-
-<div class="mt-4" border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg overflow-hidden>
+<div border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg overflow-hidden>
 <div bg="white/10" backdrop-blur px-4 py-2 flex items-center gap-2>
 <div i-carbon:chart-bar text-teal-300 text-xl />
-<span font-bold>Language familiarity (n = 44)</span>
+<span font-bold>Language familiarity</span>
 </div>
 <div px-5 py-4>
 
 <img src="./images/programming_languages.png" class="w-full rounded" />
-
-<div class="mt-6 text-center" border="2 solid violet-800" bg="violet-800/20" rounded-lg p-4>
-<span class="text-4xl font-bold text-violet-400">43%</span>
-<div class="text-sm opacity-80">were hardware novices who had never programmed a microcontroller</div>
-</div>
 
 <div class="text-xs opacity-50 mt-3">Figure 2 — many students knew more than one language.</div>
 
 </div>
 </div>
 
+<div v-click class="flex flex-col gap-4 justify-center">
+<div border="2 solid violet-800" bg="violet-800/20" rounded-lg p-6 text-center>
+<span class="text-5xl font-bold text-violet-400">43%</span>
+<div class="text-sm opacity-80 mt-2">were hardware novices who had never programmed a microcontroller</div>
+</div>
+<div v-click border="2 solid teal-800" bg="teal-800/20" rounded-lg p-6 text-center>
+<span class="text-5xl font-bold text-teal-400">93%</span>
+<div class="text-sm opacity-80 mt-2">already knew Python — the key justification for MicroPython</div>
+</div>
+</div>
+
+</div>
+
 <!--
-~1.5 min. The 93% Python number is the justification for MicroPython in one slide.
-The point: reduce the syntax and tooling hurdle so cognitive load goes to sensor
-integration and control loops, not memory management or compilation.
+~1 min. The chart and the two stats tell the student-profile story before diving into the
+hardware/language rationale on the next slide.
+-->
+
+---
+glowSeed: 12130
+---
+
+# Design Decision 2 — Hardware + Language
+
+Two linked choices, both driven by **parity**.
+
+<div class="grid grid-cols-2 gap-8 mt-6 items-start">
+
+<div border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg overflow-hidden self-start>
+<div bg="white/10" backdrop-blur px-4 py-2 flex items-center gap-2>
+<div i-carbon:assembly-cluster text-blue-300 text-xl />
+<span font-bold>Hardware — tool-less kits</span>
+</div>
+<div px-4 py-3 text-sm>
+
+No soldering iron, no oscilloscope; strong online docs.
+
+- 🤖 **XRP** (Experiential Robotics Platform) — web-based IDE
+- 🔌 **SunFounder Pico** kit — MicroPython examples
+- 🐍 **MicroPython** selected as the common language
+
+</div>
+</div>
+
+<div class="flex flex-col gap-3 items-center" style="margin-top: -40px">
+<img v-click src="./public/XRP_Robot.webp" class="w-1/2 object-contain rounded" />
+<img v-click src="./public/sunfounder.jpg.webp" class="w-1/2 object-contain rounded" />
+</div>
+
+</div>
+
+<!--
+~1 min. The 93% Python number justifies MicroPython: reduce the syntax and tooling
+hurdle so cognitive load goes to sensor integration and control loops, not memory
+management or compilation.
 -->
 
 ---
@@ -347,18 +377,19 @@ A **20-minute Zoom design review** after the planning phase of the final project
 <div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg overflow-hidden>
 <div bg="white/10" backdrop-blur px-4 py-2 flex items-center gap-2>
 <div i-carbon:time text-amber-300 text-xl />
-<span font-bold>The workload reality</span>
+<span font-bold>Feedback regarding workload</span>
 </div>
 <div px-5 py-4>
 
-The **"two-hour rule"**: if a hardware issue persists, go to office hours.
 
 <div class="mt-4" border="2 solid red-800" bg="red-800/20" rounded-lg px-4 py-3>
-🔋 <strong>The brown-out story</strong><br/>
-Students lost up to <strong>7–9 hours</strong> debugging "logic errors" that were really <strong>dead AA batteries</strong> — a fix an instructor spots in seconds.
+🔋 <strong>Hardware debugging challenges</strong><br/>
+Students lost up to <strong>3+ hours</strong> debugging problems what ended up being simple problems (eg. dead AA batteries).
 </div>
 
-<div class="mt-3 text-sm opacity-80">→ Led to making the robotics <strong>final project optional</strong>.</div>
+The **"two-hour rule"**: if a hardware issue persists, go to office hours.
+
+<div class="mt-3 text-sm opacity-80"> Extended hardware debugging led to making the robotics <strong>final project optional</strong> to stay within workload requirements.</div>
 
 </div>
 </div>
@@ -377,7 +408,7 @@ class: text-center
 glowSeed: 205
 ---
 
-# Early Result — The Engagement Surprise
+# Early Result — DL Engagement 
 
 <div v-click class="text-2xl mt-4 mb-8">
 Contrary to expectations, <span class="text-teal-400 font-bold">distance learners were <em>more</em> engaged</span> than on-campus students.
@@ -391,7 +422,7 @@ Contrary to expectations, <span class="text-teal-400 font-bold">distance learner
 <span font-bold>Distance learners</span>
 </div>
 <div px-4 py-3>
-Treated the project as a creative <strong>"break"</strong> from professional duties — more ambitious, integrating unusual features.
+Treated the project as a creative <strong>"break"</strong> from professional duties — more ambitious and creative in their final projects.
 </div>
 </div>
 
@@ -467,18 +498,18 @@ glowSeed: 310
 
 # Future Work
 
-<div class="text-sm opacity-70 mb-6">Signals the longitudinal study to come — keep brisk.</div>
+<div class="text-sm opacity-70 mb-6">Signals the longitudinal study to come.</div>
 
 <div class="grid grid-cols-2 gap-4">
 
 <div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3>
 <div class="text-2xl">🤖</div>
-<div><strong>Boilerplate code</strong> in robotics to cut low-level debugging and shift focus to integration.</div>
+<div>Develop <strong>boilerplate code</strong> for students to cut low-level debugging and shift focus to integration.</div>
 </div>
 
 <div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3>
 <div class="text-2xl">📋</div>
-<div><strong>Tiered oral-exam schedule</strong> — three 10–15 min checkpoints across the term.</div>
+<div><strong>Tiered oral-exam schedule</strong> — three 10 min oral checkpoints across the term, using predefined questions.</div>
 </div>
 
 <div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3>
@@ -491,12 +522,12 @@ glowSeed: 310
 <div>Classify AI use as <strong>"augmentative" vs. "bypass,"</strong> correlated with oral performance.</div>
 </div>
 
-<div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3>
+<div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3 min-h-20>
 <div class="text-2xl">✅</div>
 <div><strong>IRB approval</strong> for demographic analysis (gender, industry background).</div>
 </div>
 
-<div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3>
+<div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3 min-h-20>
 <div class="text-2xl">🧑‍🏫</div>
 <div>Test oral exams as an <strong>alternative to peer learning</strong> in asynchronous settings.</div>
 </div>
