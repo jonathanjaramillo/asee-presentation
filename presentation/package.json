@@ -3,9 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "slidev --open",
-    "build": "slidev build",
-    "export": "slidev export"
+    "dev": "PATH=/opt/homebrew/opt/node@20/bin:$PATH slidev --open",
+    "build": "PATH=/opt/homebrew/opt/node@20/bin:$PATH slidev build",
+    "export": "PATH=/opt/homebrew/opt/node@20/bin:$PATH slidev export"
   },
   "dependencies": {
     "@slidev/cli": "^52.0.0",
