@@ -23,14 +23,27 @@ glowSeed: 229
 
 # Strategies for Hybrid, Hands-on Courses
 
-### Robotics, Embedded Systems & IoT
+### Robotics and Embedded Systems
 
 <div class="pt-6 opacity-80 text-lg">
-A Work-in-Progress case study from <strong>Cornell Systems Engineering</strong>
+ASEE Annual Conference · Work-in-Progress Session
 </div>
 
-<div class="pt-10 text-sm opacity-60">
-ASEE Annual Conference · Work-in-Progress Session
+<div class="pt-10">
+  <div class="flex flex-col items-center gap-2">
+    <div class="font-semibold text-lg">Dr. Jonathan Jaramillo</div>
+    <div class="text-sm opacity-70">Systems Engineering Department, Cornell University</div>
+  </div>
+
+  <div class="flex flex-col items-center gap-2 mt-3">
+    <div class="font-semibold text-lg">Alexandra Coso Strong</div>
+    <div class="text-sm opacity-70">R.F. Smith School of Chemical and Biomolecular Engineering &amp; Systems Engineering Program, Cornell University</div>
+  </div>
+
+  <div class="flex flex-col items-center gap-2 mt-3">
+    <div class="font-semibold text-lg">Margaret Webb</div>
+    <div class="text-sm opacity-70">Postdoctoral Research Fellow, Center for Interdisciplinary Education Research (CIDER), Cornell University</div>
+  </div>
 </div>
 
 <!--
@@ -628,7 +641,7 @@ glowSeed: 100
 
 <div class="flex gap-6 items-start mt-4">
 
-<div border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg px-5 py-4 text-sm flex-1>
+<div border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg px-5 py-4 text-sm style="width:50%;flex-shrink:0">
 
 Questions asked:
 
@@ -639,7 +652,7 @@ Questions asked:
 
 </div>
 
-<div class="w-1/3 shrink-0">
+<div class="w-1/2 shrink-0">
 <img src="./images/topic_familiarity.png" class="w-full rounded" />
 </div>
 
