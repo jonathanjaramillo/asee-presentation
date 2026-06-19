@@ -500,7 +500,7 @@ glowSeed: 310
 
 <div class="text-sm opacity-70 mb-6">Signals the longitudinal study to come.</div>
 
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-2 gap-4" style="grid-auto-rows: 1fr">
 
 <div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3>
 <div class="text-2xl">🤖</div>
@@ -522,12 +522,12 @@ glowSeed: 310
 <div>Classify AI use as <strong>"augmentative" vs. "bypass,"</strong> correlated with oral performance.</div>
 </div>
 
-<div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3 min-h-20>
+<div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3>
 <div class="text-2xl">✅</div>
 <div><strong>IRB approval</strong> for demographic analysis (gender, industry background).</div>
 </div>
 
-<div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3 min-h-20>
+<div v-click border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg flex gap-3 items-start px-4 py-3>
 <div class="text-2xl">🧑‍🏫</div>
 <div>Test oral exams as an <strong>alternative to peer learning</strong> in asynchronous settings.</div>
 </div>
@@ -603,8 +603,6 @@ ready for detailed questions.
 -->
 
 ---
-layout: two-cols
-layoutClass: gap-8
 glowSeed: 100
 ---
 
@@ -612,17 +610,25 @@ glowSeed: 100
 
 <div class="text-sm opacity-70 mb-4">Figure 1 — Distribution of majors across SYSEN 5411 + 5412.</div>
 
-<div class="mt-8" border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg px-6 py-5>
-<img src="./images/majors.png" class="w-full rounded" />
+<div class="mt-8 flex justify-center" border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg px-6 py-5>
+<img src="./images/majors.png" class="w-2/5 rounded" />
 </div>
 
-::right::
+<!--
+Backup only. Pull up on demand for detailed questions about cohort composition.
+-->
+
+---
+glowSeed: 100
+---
 
 # Backup — Topic Familiarity
 
 <div class="text-sm opacity-70 mb-4">Figure 3 — Self-rated familiarity, 1–5 scale.</div>
 
-<div border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg px-5 py-4 text-sm>
+<div class="flex gap-6 items-start mt-4">
+
+<div border="2 solid white/5" bg="white/5" backdrop-blur-sm rounded-lg px-5 py-4 text-sm flex-1>
 
 Questions asked:
 
@@ -633,12 +639,12 @@ Questions asked:
 
 </div>
 
-<div class="mt-4">
+<div class="w-1/3 shrink-0">
 <img src="./images/topic_familiarity.png" class="w-full rounded" />
 </div>
 
+</div>
+
 <!--
-Backup only. Pull up on demand for detailed questions about cohort composition or
-incoming skill level. Note from the outline: use at most three charts total in the talk
-to avoid chart fatigue.
+Backup only. Pull up on demand for detailed questions about incoming skill level.
 -->
